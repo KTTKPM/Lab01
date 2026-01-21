@@ -1,0 +1,3 @@
+# Node modules (all levels)
+node_modules/
+**/node_modules/
