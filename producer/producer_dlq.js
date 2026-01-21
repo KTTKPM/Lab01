@@ -33,9 +33,9 @@ async function connectRabbitMQ() {
 app.post("/send", async (req, res) => {
   const { message, orderId } = req.body;
 
-  // if (!message || !orderId) {
-  //   return res.status(400).json({ error: "message or orderId is required" });
-  // }
+  if (!message || !orderId) {
+    return res.status(400).json({ error: "message or orderId is required" });
+  }
 
   const data = {
     message: message,
